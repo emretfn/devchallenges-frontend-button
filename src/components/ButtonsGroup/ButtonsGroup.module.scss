@@ -1,0 +1,10 @@
+.buttonsGroup {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: var(--font-size-xs);
+  display: flex;
+  gap: 60px;
+
+  &:first-child {
+    margin-top: 28px;
+  }
+}

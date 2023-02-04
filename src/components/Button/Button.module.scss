@@ -1,0 +1,181 @@
+.btn {
+  $self: &;
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: var(--space-s);
+  padding: var(--space-s) var(--space-l);
+  background-color: var(--default);
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  font-weight: 500;
+  font-size: var(--font-size-s);
+  box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+  color: var(--text-color);
+
+  & .material-icons {
+    font-size: var(--font-size-s);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--default-hover);
+  }
+
+  &--variant-outline {
+    color: var(--primary);
+    background-color: transparent;
+    border: 1px solid var(--primary);
+
+    &:hover,
+    &:focus {
+      background-color: var(--light-blue);
+    }
+  }
+
+  &--variant-text {
+    color: var(--primary);
+    background-color: transparent;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--light-blue);
+    }
+  }
+
+  &--disable-shadow {
+    box-shadow: none;
+  }
+
+  &--sm {
+    padding: var(--space-xs) var(--space-m);
+  }
+
+  &--lg {
+    padding: var(--space-m) var(--space-xl);
+  }
+
+  &--primary {
+    background-color: var(--primary);
+    color: var(--white);
+
+    &:hover,
+    &:focus {
+      background-color: var(--primary-hover);
+    }
+  }
+
+  &--secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+
+    &:hover,
+    &:focus {
+      background-color: var(--secondary-hover);
+    }
+  }
+
+  &--danger {
+    background-color: var(--danger);
+    color: var(--white);
+
+    &:hover,
+    &:focus {
+      background-color: var(--danger-hover);
+    }
+  }
+
+  &--variant-outline#{$self}--primary {
+    color: var(--primary);
+    background-color: transparent;
+    border: 1px solid var(--primary);
+
+    &:hover,
+    &:focus {
+      background-color: var(--light-blue);
+    }
+  }
+
+  &--variant-outline#{$self}--secondary {
+    color: var(--secondary);
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+
+    &:hover,
+    &:focus {
+      background-color: var(--secondary-hover);
+      color: var(--white);
+    }
+  }
+
+  &--variant-outline#{$self}--danger {
+    color: var(--danger);
+    background-color: transparent;
+    border: 1px solid var(--danger);
+
+    &:hover,
+    &:focus {
+      background-color: var(--danger-hover);
+      color: var(--white);
+    }
+  }
+
+  &--variant-text#{$self}--primary {
+    color: var(--primary);
+    background-color: transparent;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--light-blue);
+    }
+  }
+
+  &--variant-text#{$self}--secondary {
+    color: var(--secondary);
+    background-color: transparent;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--secondary);
+      color: var(--white);
+    }
+  }
+
+  &--variant-text#{$self}--danger {
+    color: var(--danger);
+    background-color: transparent;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--danger);
+      color: var(--white);
+    }
+  }
+
+  &--disabled {
+    background-color: var(--default);
+    color: var(--disabled);
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: var(--default);
+    }
+  }
+
+  &--variant-text#{$self}--disabled {
+    color: var(--disabled);
+    background-color: transparent;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--disabled);
+    }
+  }
+}
